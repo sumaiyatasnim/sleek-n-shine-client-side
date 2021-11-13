@@ -11,7 +11,7 @@ const ManageAllOrders = () => {
     // };
     console.log(status);
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders")
+        fetch("https://arcane-plains-83657.herokuapp.com/allOrders")
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, []);
@@ -30,7 +30,7 @@ const ManageAllOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/delteOrder/${id}`, {
+            fetch(`https://arcane-plains-83657.herokuapp.com/delteOrder/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

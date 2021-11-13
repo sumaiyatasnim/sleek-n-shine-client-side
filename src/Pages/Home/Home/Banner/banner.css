@@ -1,0 +1,22 @@
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://i.ibb.co/h27VqHB/chandra-oh-HXt-Rc-MPvr-Ec-unsplash.jpg"),
+      linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+  
+  .title {
+    font-weight: 500;
+    font-size: 28px;
+    color: white;
+  }
+  

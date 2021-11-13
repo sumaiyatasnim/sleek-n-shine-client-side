@@ -74,7 +74,7 @@
 // export default Dashboard;
 
 
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 
 import "./Dashboard.css";
@@ -93,23 +93,10 @@ const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const { user, admin } = useAuth();
 
-    // const [isAdmi, setIsAdmin] = useState(false);
-
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             if (data[0]?.role === "admin") {
-    //                 setIsAdmin(true);
-    //             } else {
-    //                 setIsAdmin(false);
-    //             }
-    //         });
-    // }, [user?.email]);
 
     return (
-        <div>
-            <div className="dashboard-container ">
+        <div className="container">
+            <div className="dashboard-container container">
                 <div className="row">
                     <div className="col-md-3 ">
                         <div className="dashboard">
@@ -155,7 +142,7 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-md-9 container">
                         <Switch>
                             <Route path={`${path}/myOrder`}>
                                 <MyOrder></MyOrder>

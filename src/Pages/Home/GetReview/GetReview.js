@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const GetReview = ({ reviews }) => {
-    const { _id, name, email, addReview } = reviews;
+    const { name, email, addReview } = reviews;
     return (
         <div className="container">
             <div className="col rounded-3 gy-3">

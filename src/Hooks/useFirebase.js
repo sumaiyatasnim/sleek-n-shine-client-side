@@ -17,7 +17,7 @@ const useFirebase = () => {
     const auth = getAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+        fetch(`https://arcane-plains-83657.herokuapp.com/checkAdmin/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -56,7 +56,7 @@ const useFirebase = () => {
 
     //Save user method
     const handleUserInfoRegister = (email, method) => {
-        fetch("http://localhost:5000/addUserInfo", {
+        fetch("https://arcane-plains-83657.herokuapp.com/addUserInfo", {
             method: method,
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ email }),

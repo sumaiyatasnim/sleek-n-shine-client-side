@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import "./orderPlace.css";
 const OrderProduct = () => {
@@ -9,7 +9,7 @@ const OrderProduct = () => {
     const { user } = useAuth();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     useEffect(() => {
-        fetch(`http://localhost:5000/allProducts/${productId}`)
+        fetch(`https://arcane-plains-83657.herokuapp.com/allProducts/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, []);
@@ -19,7 +19,7 @@ const OrderProduct = () => {
         data.order = myOrder;
         data.email = user.email;
         console.log('my order', myOrder)
-        fetch('http://localhost:5000/myOrders', {
+        fetch('https://arcane-plains-83657.herokuapp.com/myOrders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
