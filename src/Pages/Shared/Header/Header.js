@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import './header.css'
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../Hooks/useAuth';
-
+import logo from '../../../Images/sleek n shine (2).png'
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <>
             <Navbar bg="light" variant="light" sticky="top" collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home"> <img className="img-fluid logo" src="" alt="" /> </Navbar.Brand>
+                    <Navbar.Brand href="#home"> <img className="img-fluid logo" src={logo} alt="" /> </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={HashLink} to="/home">Home</Nav.Link>
